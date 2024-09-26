@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">Chotu</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="ExclusiveInclusiveGst">
+        <item>Exclusive GST</item>
+        <item>Inclusive GST</item>
+    </string-array>
+
+    <string-array name="OtherDetailsTCS">
+        <item>Percent wise on Taxable Amount</item>
+        <item>Percent wise on Final Amount</item>
+    </string-array>
+
+    <string-array name="DiscountPercent">
+        <item>(% Percent Wise)</item>
+        <item>(₹ Amount Wise)</item>
+    </string-array>
+
+    <string-array name="CessPercent">
+        <item>(% Percent Wise)</item>
+        <item>(Unit Wise)</item>
+    </string-array>
+
+    <string-array name="GstPercent">
+        <item>No Gst</item>
+        <item>Gst @ 0 %</item>
+        <item>Exempted</item>
+        <item>Non-GST</item>
+        <item>GST @ 0.1%</item>
+        <item>GST @ 0.25%</item>
+        <item>GST @ 1.5%</item>
+        <item>GST @ 3%</item>
+        <item>GST @ 5%</item>
+        <item>GST @ 6%</item>
+        <item>GST @ 12%</item>
+        <item>GST @ 14%</item>
+        <item>GST @ 18%</item>
+        <item>GST @ 28%</item>
+    </string-array>
+
+
+    <string-array name="PaymentMode">
+        <item>CASH</item>
+        <item>CHEQUE</item>
+        <item>NET BANKING</item>
+        <item>UPI</item>
+    </string-array>
+
+    <string-array name="TransportSupplyType">
+        <item>B2B</item>
+        <item>SEZWP</item>
+        <item>SEZWOP</item>
+        <item>EXPWP</item>
+        <item>EXPWOP</item>
+        <item>DEXP</item>
+    </string-array>
+
+    <string-array name="PaymentTreatment">
+        <item>Against Bill</item>
+        <item>Advance</item>
+        <item>On Account</item>
+    </string-array>
+
+    <string-array name="TransportMode">
+        <item>Road</item>
+        <item>Air</item>
+        <item>Rail</item>
+        <item>Ship/Road Cum Ship</item>
+        <item>Not-Applicable</item>
+    </string-array>
+
+    <string-array name="ProductUnit">
+        <item>BAG</item>
+        <item>BAL</item>
+        <item>BDL</item>
+        <item>BKL</item>
+        <item>BOU</item>
+        <item>BOX</item>
+        <item>BTL</item>
+        <item>BUN</item>
+        <item>CAN</item>
+        <item>CBM</item>
+        <item>CCM</item>
+        <item>CMS</item>
+        <item>CTN</item>
+        <item>DOZ</item>
+        <item>DRM</item>
+        <item>GGR</item>
+        <item>GMS</item>
+        <item>GRS</item>
+        <item>GYD</item>
+        <item>KGS</item>
+        <item>KLR</item>
+        <item>KME</item>
+        <item>LTR</item>
+        <item>MLT</item>
+        <item>MTR</item>
+        <item>MTS</item>
+        <item>NOS</item>
+        <item>PAC</item>
+        <item>PCS</item>
+        <item>PRS</item>
+        <item>QTL</item>
+        <item>ROL</item>
+        <item>SET</item>
+        <item>SQF</item>
+        <item>SQM</item>
+        <item>SQY</item>
+        <item>TBS</item>
+        <item>TGM</item>
+        <item>THD</item>
+        <item>TON</item>
+        <item>TUB</item>
+        <item>UGS</item>
+        <item>UNT</item>
+        <item>YDS</item>
+        <item>OTH</item>
+    </string-array>
+
+    <string-array name="ExpenseCategory">
+        <item>Select Category</item>
+        <item>Bill and Utilities</item>
+        <item>Food and Dining</item>
+        <item>Gifts and Decorations</item>
+        <item>Health and Fitness</item>
+        <item>Investments</item>
+        <item>Other</item>
+        <item>Personal Care</item>
+        <item>Recharge</item>
+        <item>Shopping</item>
+        <item>Taxes</item>
+        <item>Travel</item>
+    </string-array>
+
+    <string-array name="india_states_array">
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string-array name="gst_treatment_type">
+
+        <item>Registered Business\n\n
+        Regular: is a customer who has a business\n
+        which is registered under GST and has\n
+        a GSTIN (doesn\'t include customers\n
+        registered under composition scheme, as an SEZ or\n
+        as EOU\'s, STP\'s EHTP\'s etc.)</item>
+        <item>UnRegistered Business\n\n
+        Is a customer who has a business\n
+        which is not registered under GST\n
+        and does not have a GSTIN</item>
+        <item>Consumer\n\n
+        Is a customer who is not registered \n
+        under GST and is the final customer \n
+        of the service or product sold.</item>
+        <item>Overseas/Export\n\n
+        Is a customer who has a business \n
+        which is located out of India</item>
+        <item>SEZ\n\n
+        Is a customer who has a business \n
+        which is registered under GST, has a \n
+        GSTIN and is located in a SEZ or is a \n
+        SEZ Developer</item>
+    </string-array>
+
+</resources>

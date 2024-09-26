@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.lists.product.addProduct.AddProduct">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Item Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvItemName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etItemName">
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="?actionBarSize"-->
+<!--                    android:id="@+id/tabLayout"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    android:background="@color/black"-->
+<!--                    />-->
+
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tabIndicator="@drawable/tablayout_indicator"
+                            app:tabIndicatorAnimationDuration="300"
+                            app:tabIndicatorGravity="bottom"
+                            app:tabInlineLabel="true"
+                            app:tabBackground="@drawable/tab_color_selector"
+                            app:tabMode="fixed"
+                            app:tabRippleColor="@color/teal_200"
+                            app:tabSelectedTextColor="@color/white"
+                            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                            app:tabTextColor="#3c3c3c">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Basic Details" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Optional Details" />
+
+                        </com.google.android.material.tabs.TabLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/basic_details_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabLayout">
+
+                <TextView
+                    android:id="@+id/tvHSN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="15dp"
+                    android:text="HSN"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <EditText
+                    android:id="@+id/etHSN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:maxLines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHSN" />
+
+                <TextView
+                    android:id="@+id/tvSalePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="15dp"
+                    android:text="Sale Price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etHSN" />
+
+                <EditText
+                    android:id="@+id/etUnitPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@id/view_middleLine"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSalePrice" />
+
+                <View
+                    android:id="@+id/view_middleLine"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/grey_background"
+                    app:layout_constraintBottom_toBottomOf="@id/etUnitPrice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvSalePrice" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvUnit"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/etUnitPrice"
+                    app:layout_constraintTop_toBottomOf="@id/etHSN"
+                    android:hint="Unit"
+                    app:layout_constraintStart_toEndOf="@id/view_middleLine"
+                    >
+                <AutoCompleteTextView
+                        android:id="@+id/etUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view_middleLine_horizontal_22"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/grey_background"
+                    app:layout_constraintTop_toBottomOf="@id/tvUnit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+                <TextView
+                    android:id="@+id/tvTaxInclusive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="15dp"
+                    android:text="Tax Inclusive"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_middleLine_horizontal_22" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchTaxInclusiveExclusive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/SwitchCompatTheme"
+                    app:layout_constraintStart_toEndOf="@id/tvTaxInclusive"
+                    app:layout_constraintEnd_toStartOf="@id/tvTaxExclusive"
+                    app:layout_constraintTop_toBottomOf="@id/view_middleLine_horizontal_22"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTaxExclusive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="15dp"
+                    android:text="Tax Exclusive"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_middleLine_horizontal_22" />
+
+                <View
+                    android:id="@+id/view_middleLine_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/grey_background"
+                    app:layout_constraintTop_toBottomOf="@id/tvTaxInclusive"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvGSTPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:text="GST (%)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_middleLine_horizontal" />
+
+                <View
+                    android:id="@+id/view_middleLine3"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/grey_background"
+                    app:layout_constraintBottom_toBottomOf="@id/etCESS"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/view_middleLine_horizontal" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/GSTSpinner"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:hint="Select Percent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/view_middleLine3"
+                    app:layout_constraintTop_toBottomOf="@+id/view_middleLine_horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/tvGSTPercent">
+                    <AutoCompleteTextView
+                        android:id="@+id/etGSTSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view_middleLine_horizontal2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/grey_background"
+                    app:layout_constraintTop_toBottomOf="@id/GSTSpinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCESS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="15dp"
+                    android:text="CESS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_middleLine_horizontal2" />
+
+                <EditText
+                    android:id="@+id/etCESS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@id/view_middleLine3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCESS" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/CESSPercentSpinner"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:hint="Select Percent"
+                    android:layout_margin="8dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/view_middleLine3"
+                    app:layout_constraintTop_toBottomOf="@+id/view_middleLine_horizontal2"
+                    app:layout_constraintBottom_toBottomOf="@id/etCESS">
+                    <AutoCompleteTextView
+                        android:id="@+id/etCESSPercentSpinner"
+                        android:layout_width="match_parent"
+                        android:textSize="11sp"
+                        android:layout_height="match_parent"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintOptional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tabLayout"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvPurchasePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="15dp"
+                        android:text="PurchasePrice"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/etPurchasePrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="number"
+                        app:layout_constraintEnd_toEndOf="@id/view_middleLine_o_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvPurchasePrice" />
+
+
+                    <View
+                        android:id="@+id/view_middleLine_o_1"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/grey_background"
+                        app:layout_constraintBottom_toTopOf="@id/tvMaintainStock"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvPurchasePrice" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ExclusiveGSTSpinner"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:hint="Select"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/view_middleLine_o_1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/tvMaintainStock"
+                        >
+                        <AutoCompleteTextView
+                            android:id="@+id/etExclusiveGSTSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvMaintainStock"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/tab_background_selected"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Maintain Stock"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etPurchasePrice" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaintainStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SwitchCompatTheme"
+                        app:layout_constraintTop_toTopOf="@id/tvMaintainStock"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/tvMaintainStock"
+                        android:layout_marginEnd="15dp"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tvMaintainStock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/constraintLayout_mainStock"
+                        >
+
+                        <TextView
+                            android:id="@+id/tvOpeningStock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="Opening Stock"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/invoice_text_size"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/etOpeningStock"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:maxLines="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvOpeningStock" />
+
+                        <View
+                            android:id="@+id/view_middleLine_o_horizontal2"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/grey_background"
+                            app:layout_constraintTop_toBottomOf="@id/etOpeningStock"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <View
+                            android:id="@+id/view_middleLine_o_2"
+                            android:layout_width="2dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/grey_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_middleLine_o_horizontal2" />
+
+                        <TextView
+                            android:id="@+id/tvOpeningStockDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="15dp"
+                            android:text="Opening Stock Date"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/invoice_text_size"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/view_middleLine_o_horizontal2" />
+
+                        <EditText
+                            android:id="@+id/etOpeningStockDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:inputType="none"
+                            app:layout_constraintEnd_toEndOf="@id/view_middleLine_o_2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvOpeningStockDate" />
+
+                        <TextView
+                            android:id="@+id/tvLowStockAlert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="15dp"
+                            android:text="Low Stock Alert"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/invoice_text_size"
+                            app:layout_constraintStart_toEndOf="@id/view_middleLine_o_2"
+                            app:layout_constraintTop_toBottomOf="@id/view_middleLine_o_horizontal2" />
+
+                        <EditText
+                            android:id="@+id/etLowStockAlert"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:hint="Enter Quantity"
+                            android:inputType="number"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/view_middleLine_o_2"
+                            app:layout_constraintTop_toBottomOf="@id/tvLowStockAlert" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tv_expiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Expiry Date"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@id/constraintLayout_mainStock"
+                        />
+
+                        <EditText
+                            android:id="@+id/etExpiryDate"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:inputType="none"
+                            android:clickable="true"
+                            android:focusable="false"
+                            app:layout_constraintTop_toTopOf="@id/tv_expiry"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="20dp"
+                            />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textSize="@dimen/invoice_text_size"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+
+            <include
+                android:id="@+id/progressBar_Layout"
+                layout="@layout/progress_bar" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

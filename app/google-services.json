@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "94767252690",
+    "project_id": "chotu-24692",
+    "storage_bucket": "chotu-24692.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94767252690:android:18f38ac84639391499590b",
+        "android_client_info": {
+          "package_name": "com.itechnowizard.chotu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94767252690-54bj50q90qovo6gte00ke9gppd0bhuh5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itechnowizard.chotu",
+            "certificate_hash": "58e08840d49e9ef44f0862e865c331734e02267d"
+          }
+        },
+        {
+          "client_id": "94767252690-ov1jofp8288c7iplt1p4tko34evabus1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwg7Niv0a9FuF7lJe0VFIdTXdRhNMNS7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94767252690-ov1jofp8288c7iplt1p4tko34evabus1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

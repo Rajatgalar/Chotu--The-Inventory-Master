@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="invoice_text_size">20sp</dimen>
+    <dimen name="inventory_text_size">18sp</dimen>
+
+    <dimen name="dashboard_button_layout_width">100dp</dimen>
+    <dimen name="dashboard_button_layout_height">100dp</dimen>
+
+    <dimen name="add_expense_margin_start">24dp</dimen>
+    <dimen name="add_expense_margin_end">24dp</dimen>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_productList"
+        android:icon="@drawable/ic_productlist"
+        android:title="Product List" />
+    <item
+        android:id="@+id/nav_buyerList"
+        android:icon="@drawable/ic_buyerlist"
+        android:title="Buyer List" />
+    <item
+        android:id="@+id/nav_sellerList"
+        android:icon="@drawable/ic_productlist"
+        android:title="Seller List" />
+
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share App" />
+
+    <item
+        android:id="@+id/nav_rateus"
+        android:icon="@drawable/ic_rateus"
+        android:title="Rate Us" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Log Out" />
+</menu>

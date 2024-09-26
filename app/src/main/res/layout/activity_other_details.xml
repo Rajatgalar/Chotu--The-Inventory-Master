@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.lists.other.OtherDetails">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvPONumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="PO Number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPONumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvPODate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="PO Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPONumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPODate"
+                    android:layout_width="match_parent"
+                    android:inputType="none"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvChallanNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="Challan Number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPODate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etChallanNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvDueDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="Due Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChallanNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDueDate"
+                    android:layout_width="match_parent"
+                    android:inputType="none"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvEWayBillNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="E-Way Bill Number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChallanNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEWayBillNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvSalesPerson"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="Sales Person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEWayBillNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSalesPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvOtherCharges"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/tab_background_selected"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Other Charges"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvSalesPerson"
+                app:layout_goneMarginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvReverseCharges"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Reverse Charges"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvOtherCharges"
+                app:layout_goneMarginTop="10dp" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Is this transaction applicable for reverse charge?"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvReverseCharges" />
+
+            <TextView
+                android:id="@+id/tvTCSFULL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="TCS (Tax Collected at Source)"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/checkbox1"
+                app:layout_goneMarginTop="10dp" />
+
+            <RadioButton
+                android:id="@+id/rbtcs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:buttonTint="@color/app_primary_color"
+                android:text="TCS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTCSFULL" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvTCS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:hint="TCS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvTCSPercent"
+                app:layout_constraintTop_toBottomOf="@id/rbtcs">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTcs"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvTCSPercent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:hint=""
+                app:layout_constraintStart_toEndOf="@id/tvTCS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvTCS"
+                app:layout_constraintTop_toBottomOf="@id/rbtcs">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etTcsType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="8sp"
+                    android:background="#D8D2D2"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvTaxPreference"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Tax Preference"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvTCSPercent"
+                app:layout_goneMarginTop="10dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:checkedButton="@+id/rb1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTaxPreference">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:text="Tax Exclusive" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:text="Tax Inclusive" />
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:text="No GST" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvFreightCharge"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Freight Charge"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup"
+                app:layout_goneMarginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etFreightChargeGst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="GST"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFreightCharge" />
+
+            <EditText
+                android:id="@+id/etFreightCharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="Taxable Amount"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etFreightChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvFreightCharge" />
+
+            <EditText
+                android:id="@+id/tvFreightChargeAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#D8D2D2"
+                android:paddingStart="15dp"
+                android:hint="Amount"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etFreightChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvFreightCharge" />
+
+            <TextView
+                android:id="@+id/tvInsuranceCharge"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Insurance Charge"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvFreightChargeAmount"
+                app:layout_goneMarginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etInsuranceChargeGst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="GST"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInsuranceCharge" />
+
+            <EditText
+                android:id="@+id/etInsuranceCharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="Taxable Amount"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etInsuranceChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvInsuranceCharge" />
+
+            <EditText
+                android:id="@+id/tvInsuranceChargeAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#D8D2D2"
+                android:paddingStart="15dp"
+                android:hint="Amount"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etInsuranceChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvInsuranceCharge" />
+
+            <TextView
+                android:id="@+id/tvLoadingCharge"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Loading Charge"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvInsuranceChargeAmount"
+                app:layout_goneMarginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etLoadingChargeGst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="GST"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLoadingCharge" />
+
+            <EditText
+                android:id="@+id/etLoadingCharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="Taxable Amount"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etLoadingChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvLoadingCharge" />
+
+            <EditText
+                android:id="@+id/tvLoadingChargeAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#D8D2D2"
+                android:paddingStart="15dp"
+                android:hint="Amount"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etLoadingChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvLoadingCharge" />
+
+            <TextView
+                android:id="@+id/tvPackagingCharge"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Packaging Charge"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvLoadingChargeAmount"
+                app:layout_goneMarginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etPackagingChargeGst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="GST"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPackagingCharge" />
+
+            <EditText
+                android:id="@+id/etPackagingCharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="Taxable Amount"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etPackagingChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvPackagingCharge" />
+
+            <EditText
+                android:id="@+id/tvPackagingChargeAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#D8D2D2"
+                android:paddingStart="15dp"
+                android:hint="Amount"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etPackagingChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/tvPackagingCharge" />
+
+            <TextView
+                android:id="@+id/tvOtherCharge"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Other Charge"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/tvPackagingChargeAmount"
+                app:layout_goneMarginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etOtherChargeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="Other Charge Name"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOtherCharge" />
+
+            <EditText
+                android:id="@+id/etOtherChargeGst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="GST"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etOtherChargeName" />
+
+            <EditText
+                android:id="@+id/etOtherCharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border_grey"
+                android:hint="Taxable Amount"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/etOtherChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/etOtherChargeName" />
+
+            <EditText
+                android:id="@+id/tvOtherChargeAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#D8D2D2"
+                android:paddingStart="15dp"
+                android:hint="Amount"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="15dp"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/etOtherChargeGst"
+                app:layout_constraintTop_toBottomOf="@id/etOtherChargeName" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/tvOtherChargeAmount"
+                />
+
+            <include
+                android:id="@+id/progressBar_Layout"
+                layout="@layout/progress_bar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

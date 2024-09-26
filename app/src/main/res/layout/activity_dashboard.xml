@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.dashboard.DashboardActivity"
+    tools:openDrawer="start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar_layout"
+                layout="@layout/toolbar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/ic_home_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_vertical_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.50" />
+
+
+                <ImageButton
+                    android:id="@+id/btnLedger"
+                    android:layout_width="@dimen/dashboard_button_layout_width"
+                    android:layout_height="@dimen/dashboard_button_layout_height"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_ledger"
+                    app:layout_constraintEnd_toStartOf="@+id/btnGstfiling"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/btnGstfiling"
+                    android:layout_width="@dimen/dashboard_button_layout_width"
+                    android:layout_height="@dimen/dashboard_button_layout_height"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_gst_filing"
+                    app:layout_constraintEnd_toStartOf="@+id/btnPerforma"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnLedger"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/btnPerforma"
+                    android:layout_width="@dimen/dashboard_button_layout_width"
+                    android:layout_height="@dimen/dashboard_button_layout_height"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_performa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnGstfiling"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btnQuotation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_quotation"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/btnLedger"
+                    app:layout_constraintStart_toStartOf="@id/btnLedger"
+                    app:layout_constraintEnd_toStartOf="@id/btnDashboard"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnDashboard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_dsashboard"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@id/btnQuotation"
+                    app:layout_constraintEnd_toEndOf="@id/btnPerforma"
+                    app:layout_constraintStart_toEndOf="@id/btnQuotation"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnInventory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="-25dp"
+                    android:src="@drawable/ic_inventory"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/btnDashboard"
+                    app:layout_constraintEnd_toEndOf="@id/btnPerforma"
+                    app:layout_constraintStart_toEndOf="@id/guideline_vertical_50"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPurchase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_purchase"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toTopOf="@id/btnExpense"
+                    app:layout_constraintTop_toBottomOf="@id/btnQuotation"
+                    app:layout_constraintStart_toStartOf="@id/btnLedger"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_vertical_50"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnExpense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_expense"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    app:layout_constraintBottom_toBottomOf="@id/btnInventory"
+                    app:layout_constraintStart_toStartOf="@id/btnLedger"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_vertical_50"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPaymentReceipt"
+                    android:layout_width="@dimen/dashboard_button_layout_width"
+                    android:layout_height="@dimen/dashboard_button_layout_height"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_payment_receipt"
+                    app:layout_constraintEnd_toStartOf="@+id/btnGstfiling"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnExpense"/>
+
+
+                <ImageButton
+                    android:id="@+id/btnPaymentMade"
+                    android:layout_width="@dimen/dashboard_button_layout_width"
+                    android:layout_height="@dimen/dashboard_button_layout_height"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_payment_made"
+                    app:layout_constraintEnd_toStartOf="@+id/btnPerforma"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnPaymentReceipt"
+                    app:layout_constraintTop_toTopOf="@id/btnPaymentReceipt" />
+
+
+                <ImageButton
+                    android:id="@+id/btnExpiry"
+                    android:layout_width="@dimen/dashboard_button_layout_width"
+                    android:layout_height="@dimen/dashboard_button_layout_height"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_expiry"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnPaymentMade"
+                    app:layout_constraintTop_toTopOf="@id/btnPaymentReceipt" />
+
+
+                <ImageButton
+                    android:id="@+id/btnDebitNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_debit_note"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/btnPaymentReceipt"
+                    app:layout_constraintStart_toStartOf="@id/btnPaymentReceipt"
+                    app:layout_constraintEnd_toStartOf="@id/btnCreditNote"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnCreditNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_credit_note"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@id/btnDebitNote"
+                    app:layout_constraintEnd_toEndOf="@id/btnPerforma"
+                    app:layout_constraintStart_toEndOf="@id/btnDebitNote"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/btnInvoice"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_invoice"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/btnDebitNote"
+                    app:layout_constraintStart_toStartOf="@id/btnLedger"
+                    app:layout_constraintEnd_toEndOf="@id/btnPerforma"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_navigation_drawer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

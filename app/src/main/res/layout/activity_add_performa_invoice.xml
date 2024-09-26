@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".presentation.invoice.addinvoice.AddInvoiceActivity">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/rb1"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:text="Tax Invoice/E-Invoice" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:layout_height="wrap_content"
+                    android:text="Bill Of Supply" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvInvoiceDate"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Invoice Date"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup"
+                app:layout_constraintEnd_toStartOf="@id/tvInvoicePrefix"/>
+
+            <TextView
+                android:id="@+id/tvInvoicePrefix"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Invoice Prefix"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/tvInvoiceNumber"
+                app:layout_constraintStart_toEndOf="@id/tvInvoiceDate"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+            <TextView
+                android:id="@+id/tvInvoiceNumber"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Invoice No."
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvInvoicePrefix"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+            <EditText
+                android:id="@+id/etInvoiceDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvInvoiceDate"
+                app:layout_constraintStart_toStartOf="@id/tvInvoiceDate"
+                app:layout_constraintTop_toBottomOf="@id/tvInvoiceDate" />
+
+            <EditText
+                android:id="@+id/etInvoicePrefix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/tvInvoicePrefix"
+                app:layout_constraintStart_toStartOf="@id/tvInvoicePrefix"
+                app:layout_constraintTop_toBottomOf="@id/tvInvoicePrefix" />
+
+            <EditText
+                android:id="@+id/etInvoiceNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/etInvoicePrefix"
+                app:layout_constraintEnd_toEndOf="@id/tvInvoiceNumber"
+                app:layout_constraintStart_toStartOf="@id/tvInvoiceNumber" />
+
+            <TextView
+                android:id="@+id/tvSupplierDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Supplier Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/etInvoiceDate" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/supplier_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSupplierDetails">
+
+                <TextView
+                    android:id="@+id/btnAddSupplierDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_person"
+                    android:drawablePadding="25dp"
+                    android:text="Add Supplier Details"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/supplier_added_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/supplier_companyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Company Name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/supplier_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Address"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/supplier_companyName" />
+
+                    <TextView
+                        android:id="@+id/supplier_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="City Name with pin"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/supplier_address" />
+
+                    <TextView
+                        android:id="@+id/supplier_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="State"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/supplier_city" />
+
+                    <ImageView
+                        android:id="@+id/ivEditSupplier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_edit_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvBuyerDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:textColor="@color/white"
+                android:text="Buyer Details"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/supplier_layout"
+                app:layout_goneMarginTop="10dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buyerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBuyerDetails">
+
+                <TextView
+                    android:id="@+id/btnBuyerDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_person"
+                    android:drawablePadding="25dp"
+                    android:text="Add Buyer Details"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="@id/buyerLayout" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/buyer_added_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/buyerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Buyer Name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/buyerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Address"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/buyerName" />
+
+                    <TextView
+                        android:id="@+id/buyerCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="City Name with pin"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/buyerAddress" />
+
+                    <TextView
+                        android:id="@+id/buyerState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="State"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/buyerCity" />
+
+                    <TextView
+                        android:id="@+id/buyerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Email"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/buyerState" />
+
+                    <ImageView
+                        android:id="@+id/ivEditBuyer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_edit_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvConsigneeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Consignee Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/buyerLayout"
+                app:layout_goneMarginTop="10dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/r2b1"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvConsigneeDetails">
+
+                <RadioButton
+                    android:id="@+id/r2b1"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:layout_height="wrap_content"
+                    android:text="Show Consignee (Same as above)" />
+
+                <RadioButton
+                    android:id="@+id/r2b2"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:layout_height="wrap_content"
+                    android:text="Consignee Not Required" />
+
+                <RadioButton
+                    android:id="@+id/r2b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:text="Add Consignee (If different from above)" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addConsigneeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup2">
+
+                <TextView
+                    android:id="@+id/btnConsigneeDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_person"
+                    android:drawablePadding="25dp"
+                    android:text="Add Consignee Details"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/consignee_added_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/consigneeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="consignee Name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/consigneeAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Address"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/consigneeName" />
+
+                    <TextView
+                        android:id="@+id/consigneeCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="City Name with pin"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/consigneeAddress" />
+
+                    <TextView
+                        android:id="@+id/consigneeState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="State"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/consigneeCity" />
+
+                    <TextView
+                        android:id="@+id/consigneeEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Email"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/consigneeState" />
+
+                    <ImageView
+                        android:id="@+id/ivEditconsignee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_edit_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Product Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/addConsigneeLayout"
+                app:layout_goneMarginTop="10dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/productDetailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProductDetails"
+
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnProductDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_product"
+                    android:drawablePadding="25dp"
+                    android:text="Add Product"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintTop_toBottomOf="@id/productRecyclerView" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/productDetailAmountLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnProductDetails">
+
+                    <TextView
+                        android:id="@+id/tvProductAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#D8D2D2"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Amount"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/etProductAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#D8D2D2"
+                        android:drawableStart="@drawable/ic_currency_rupee_grey"
+                        android:gravity="center_vertical"
+                        android:text="00.00"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintEnd_toEndOf="@id/tvProductAmount"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTaxableAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:text="Taxable Amount"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductAmount" />
+
+                    <TextView
+                        android:id="@+id/etTaxableAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="00.00"
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_currency_rupee_grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductAmount" />
+
+                    <TextView
+                        android:id="@+id/tvProductGST"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:text="GST"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTaxableAmount" />
+
+                    <TextView
+                        android:id="@+id/etProductGST"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="00.00"
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_currency_rupee_grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTaxableAmount" />
+
+                    <TextView
+                        android:id="@+id/tvProductCESS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:text="CESS"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductGST" />
+
+                    <TextView
+                        android:id="@+id/etProductCESS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="00.00"
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_currency_rupee_grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductGST" />
+
+                    <TextView
+                        android:id="@+id/tvProductTotalTax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:text="Total Tax"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductCESS" />
+
+                    <TextView
+                        android:id="@+id/etProductTotalTax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="00.00"
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_currency_rupee_grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductCESS" />
+
+                    <TextView
+                        android:id="@+id/tvProductTotalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#D8D2D2"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Total Amount"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductTotalTax" />
+
+                    <TextView
+                        android:id="@+id/etProductTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#D8D2D2"
+                        android:drawableStart="@drawable/ic_currency_rupee_grey"
+                        android:gravity="center_vertical"
+                        android:text="00.00"
+                        android:textSize="@dimen/invoice_text_size"
+                        app:layout_constraintEnd_toEndOf="@id/tvProductAmount"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductTotalTax" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvTransportDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Transportation Details (Optional)"
+                android:textSize="@dimen/invoice_text_size"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/productDetailLayout"
+                app:layout_goneMarginTop="10dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/transport_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTransportDetails">
+
+                <TextView
+                    android:id="@+id/btnTransportDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_product"
+                    android:drawablePadding="25dp"
+                    android:text="Add Transportation details"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/transport_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/transportSupplyDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Supply Date : "
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/transport_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Transport Mode : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/transportSupplyDate" />
+
+                    <TextView
+                        android:id="@+id/transport_tranporterName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Transporter : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/transport_mode" />
+
+                    <ImageView
+                        android:id="@+id/ivEditTransport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_edit_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tvOtherDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Other Details (Optional)"
+                android:textSize="@dimen/invoice_text_size"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/transport_layout"
+                app:layout_goneMarginTop="10dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/other_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOtherDetails">
+
+                <TextView
+                    android:id="@+id/btnOtherDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_product"
+                    android:drawablePadding="25dp"
+                    android:text="Add Other details"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/otherDetail_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/otherDetail_po_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"
+                        android:text="PO Number : "
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_po_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="PO Date : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_po_number" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_challan_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Transporter : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_po_date" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_eWay_bill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Eway Bill Number : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_challan_number" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_sales_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Sales Person : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_eWay_bill" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_reverse_charge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Reverse Charge : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_sales_person" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_tcs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="TCS : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_reverse_charge" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_freight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Freight Charge : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_tcs" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_insurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Insurance Charge : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_freight" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Loading Charge : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_insurance" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_packaging"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Packaging Charge : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_loading" />
+
+                    <TextView
+                        android:id="@+id/otherDetail_otherCharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Other Charge : "
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otherDetail_packaging" />
+
+                    <ImageView
+                        android:id="@+id/ivEditOtherDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_edit_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvBankDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Bank Details (Optional)"
+                android:textSize="@dimen/invoice_text_size"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/other_detail_layout"
+                app:layout_goneMarginTop="10dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bank_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBankDetails">
+
+                <TextView
+                    android:id="@+id/btnBankDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/ic_invoice_add_product"
+                    android:drawablePadding="25dp"
+                    android:text="Add Bank details"
+                    android:textColor="@color/invoice_add_color"
+                    android:textSize="@dimen/invoice_text_size"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bankDetail_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/bankDetail_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Bank Name : "
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivEditBankDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/ic_edit_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvOptionalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Optional Details"
+                android:textSize="@dimen/invoice_text_size"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/bank_detail_layout"
+                app:layout_goneMarginTop="10dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOptionalDetails">
+
+                <RadioButton
+                    android:id="@+id/checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/app_primary_color"
+                    android:text="Original"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOptionalDetails" />
+
+                <RadioButton
+                    android:id="@+id/checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:buttonTint="@color/app_primary_color"
+                    android:layout_marginTop="10dp"
+                    android:text="Duplicate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox1" />
+
+                <RadioButton
+                    android:id="@+id/checkbox3"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/app_primary_color"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Triplicate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/checkbox2" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTermsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Terms and Conditions"
+                android:textColor="@color/white"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup3"
+                app:layout_goneMarginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etTermsAndConditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="1. This is an electronically generated document. \n
+2. All disputes are subject to Et jurisdiction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTermsDetails" />
+
+            <TextView
+                android:id="@+id/tvAddSignature"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_background"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:textColor="@color/white"
+                android:text="Add Signature (Optional)"
+                android:textSize="@dimen/invoice_text_size"
+                app:layout_constraintTop_toBottomOf="@id/etTermsAndConditions"
+                app:layout_goneMarginTop="10dp" />
+
+            <ImageButton
+                android:id="@+id/btnSign"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddSignature" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/btnSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:theme="@style/SwitchCompatTheme"
+                app:layout_constraintEnd_toEndOf="@id/btnSign"
+                app:layout_constraintTop_toTopOf="@id/btnSign" />
+
+            <include
+                android:id="@+id/progressBar_Layout"
+                layout="@layout/progress_bar" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.inventory.details.InventoryDetails">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Item Name"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+
+    <TextView
+        android:id="@+id/SalesPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Sales Price"
+        android:textSize="@dimen/inventory_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvSalePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:drawableStart="@drawable/ic_currency_rupee"
+        android:text="0.0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/SalesPrice"
+        app:layout_constraintStart_toStartOf="@id/SalesPrice"
+        app:layout_constraintTop_toBottomOf="@id/SalesPrice" />
+
+    <TextView
+        android:id="@+id/PurchasePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:text="Purchase Price"
+        android:textSize="@dimen/inventory_text_size"
+        app:layout_constraintStart_toEndOf="@id/SalesPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvPurchasePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:drawableStart="@drawable/ic_currency_rupee"
+        android:text="0.0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/PurchasePrice"
+        app:layout_constraintStart_toStartOf="@id/PurchasePrice"
+        app:layout_constraintTop_toBottomOf="@id/PurchasePrice" />
+
+    <TextView
+        android:id="@+id/StockQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Stock Qty"
+        android:textSize="@dimen/inventory_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSalePrice" />
+
+    <TextView
+        android:id="@+id/tvStockQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:drawableStart="@drawable/ic_currency_rupee"
+        android:text="0.0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/StockQty"
+        app:layout_constraintStart_toStartOf="@id/StockQty"
+        app:layout_constraintTop_toBottomOf="@id/StockQty" />
+
+    <TextView
+        android:id="@+id/StockValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Stock Value"
+        android:textSize="@dimen/inventory_text_size"
+        app:layout_constraintStart_toStartOf="@id/PurchasePrice"
+        app:layout_constraintTop_toBottomOf="@id/tvPurchasePrice" />
+
+    <TextView
+        android:id="@+id/tvStockValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:drawableStart="@drawable/ic_currency_rupee"
+        android:text="0.0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/StockValue"
+        app:layout_constraintStart_toStartOf="@id/StockValue"
+        app:layout_constraintTop_toBottomOf="@id/StockValue" />
+
+
+    <!--    <View-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="10dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tvStockQty"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:id="@+id/tabLayout"-->
+    <!--        />-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStockQty"
+        app:tabIndicator="@drawable/tablayout_indicator"
+        app:tabIndicatorAnimationDuration="300"
+        android:layout_marginTop="10dp"
+        app:tabIndicatorGravity="bottom"
+        app:tabInlineLabel="true"
+        app:tabMode="fixed"
+        app:tabRippleColor="@color/teal_200"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:tabTextColor="@color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock Timeline" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stockTimelineLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout">
+
+        <TextView
+            android:id="@+id/activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Activity"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="change"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintEnd_toStartOf="@id/finalStock"
+            app:layout_constraintStart_toEndOf="@id/activity"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/finalStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:text="Final Stock Unit"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout">
+
+
+        <TextView
+            android:id="@+id/ItemCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Item Code"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/ItemCode"
+            app:layout_constraintStart_toStartOf="@id/ItemCode"
+            app:layout_constraintTop_toBottomOf="@id/ItemCode" />
+
+        <TextView
+            android:id="@+id/MeasurementUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:text="Measurement Unit"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ItemCode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMeasurementUnit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/MeasurementUnit"
+            app:layout_constraintStart_toStartOf="@id/MeasurementUnit"
+            app:layout_constraintTop_toBottomOf="@id/MeasurementUnit" />
+
+
+        <TextView
+            android:id="@+id/Category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Category"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvItemCode" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/Category"
+            app:layout_constraintStart_toStartOf="@id/Category"
+            app:layout_constraintTop_toBottomOf="@id/Category" />
+
+
+        <TextView
+            android:id="@+id/LowStockAlertAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Low Stock Alert At "
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintStart_toStartOf="@id/MeasurementUnit"
+            app:layout_constraintTop_toBottomOf="@id/tvMeasurementUnit" />
+
+        <TextView
+            android:id="@+id/tvLowStockAlertAt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/LowStockAlertAt"
+            app:layout_constraintStart_toStartOf="@id/LowStockAlertAt"
+            app:layout_constraintTop_toBottomOf="@id/LowStockAlertAt" />
+
+        <TextView
+            android:id="@+id/GST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="GST %"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory" />
+
+        <TextView
+            android:id="@+id/tvGST"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/GST"
+            app:layout_constraintStart_toStartOf="@id/GST"
+            app:layout_constraintTop_toBottomOf="@id/GST" />
+
+        <TextView
+            android:id="@+id/HSNCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="HSN Code"
+            android:textSize="@dimen/inventory_text_size"
+            app:layout_constraintStart_toStartOf="@id/LowStockAlertAt"
+            app:layout_constraintTop_toBottomOf="@id/tvLowStockAlertAt" />
+
+        <TextView
+            android:id="@+id/tvHSNCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/HSNCode"
+            app:layout_constraintStart_toStartOf="@id/HSNCode"
+            app:layout_constraintTop_toBottomOf="@id/HSNCode" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/btnAddStock"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="15dp"-->
+<!--        android:text="Add Stock"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/btnReduceStock"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnReduceStock"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="15dp"-->
+<!--        android:text="Remove Stock"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/btnAddStock" />-->
+
+    <include
+        android:id="@+id/progressBar_Layout"
+        layout="@layout/progress_bar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

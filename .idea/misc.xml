@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable-ldpi/ic_edit_black.xml" value="0.187" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/dashed_border.xml" value="0.4" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/fab_add_24.xml" value="0.1545" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/grey_background.xml" value="0.2115" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_back.xml" value="0.2085" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_background_round_30.xml" value="0.157" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_camera.xml" value="0.1655" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_close.xml" value="0.145" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_currency_rupee.xml" value="0.145" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_currency_rupee_grey.xml" value="0.1555" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_delete.xml" value="0.2135" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_edit.xml" value="0.2135" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_invoice_add.xml" value="0.2115" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_invoice_add_person.xml" value="0.2145" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_invoice_add_product.xml" value="0.2115" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/ic_preview.xml" value="0.2135" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/round_border_grey.xml" value="0.1625" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/round_border_grey_background_grey.xml" value="0.1625" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/tab_color_selector.xml" value="0.1355" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/drawable/tablayout_indicator.xml" value="0.168" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_bank.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_buyer.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_contact.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_credit.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_debit.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_expense.xml" value="0.19628535246939638" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_invoice.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_payment_made.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_payment_receipt.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_performa_invoice.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_product.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_purchase.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_quotation.xml" value="0.29245283018867924" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_selected_product.xml" value="0.23065476190476192" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_add_seller.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_addtransport.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_bank_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_buyer_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_consignee.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_contact.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_credit_note.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_debit_note.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_detail_ledger.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_expense.xml" value="0.2421875" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_expiry.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_inventory.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_inventory_details.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_invoice.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_invoice_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_ledger.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_login.xml" value="0.228125" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_other_details.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_payment_made.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_payment_receipt.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_phone_number_auth.xml" value="0.2421875" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_product_list.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_proforma_invoice.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_purchase.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_purchase_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_quotation.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_report.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_seller.xml" value="0.18725951261222745" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_sign_up.xml" value="0.2421875" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_splash.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_supplier.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_transport_details.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/activity_transport_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/bank_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/buyer_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/contact_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/creditnote_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/custom_spinner_item.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/debitnote_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/detailledger_list.xml" value="0.176" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/dialog_add_selected_product.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/dialog_addremove_stock.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/dialog_edit.xml" value="0.19794784095767423" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/dialog_transport_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/expense_allexpense.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/expiry_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/header_navigation_drawer.xml" value="0.24114583333333334" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/inventory_detail_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/inventory_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/invoice_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/invoice_product_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/ledger_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/list_item.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/name_dialog.xml" value="0.11286874732791792" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/payment_made.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/payment_receipt.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/payment_receipt_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/product_list.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/progress_bar.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/purchase_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/seller_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/signature_dialog.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/toolbar.xml" value="0.4" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/layout/transport_list.xml" value="0.19880290722530997" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/menu/navigation_drawer.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/mipmap-anydpi-v26/ic_app_launcher_round.xml" value="0.23" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.23" />
+        <entry key="..\:/AndroidProjects/AndroidStudioProjects/Chotu/app/src/main/res/xml/file_paths.xml" value="0.19880290722530997" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

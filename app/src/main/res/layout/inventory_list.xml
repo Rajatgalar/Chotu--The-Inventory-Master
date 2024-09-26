@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="8dp"
+    android:elevation="18dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_primary_color"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:text="Title"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stockQty"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/app_primary_text_color"
+            android:gravity="center_vertical"
+            android:text="Stock Qty"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvStockQty"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text="14.0"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/stockQty"
+            app:layout_constraintStart_toStartOf="@id/stockQty"/>
+
+        <TextView
+            android:id="@+id/stockValue"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:text="Stock Value"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/stockQty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvStockValue"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text="4999999999.0"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/stockValue"
+            app:layout_constraintStart_toStartOf="@id/stockValue"/>
+
+        <TextView
+            android:id="@+id/purchasePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/app_primary_text_color"
+            android:text="Purchase Price"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStockQty" />
+
+        <TextView
+            android:id="@+id/tvPurchasePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text="0.0"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/purchasePrice"
+            app:layout_constraintStart_toStartOf="@id/purchasePrice"/>
+
+        <TextView
+            android:id="@+id/SalePrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:text="Sale Price"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/stockValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStockValue" />
+
+        <TextView
+            android:id="@+id/tvSalePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text="4999999999.0"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/SalePrice"
+            app:layout_constraintStart_toStartOf="@id/SalePrice"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

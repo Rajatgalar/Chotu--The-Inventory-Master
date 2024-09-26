@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="8dp"
+    android:elevation="18dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_primary_color"
+        android:padding="8dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/tvCreditNoteBuyerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:text="Buyer Name"
+            android:textColor="@color/app_primary_text_color"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnPreview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_preview"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintTop_toTopOf="@id/tvCreditNoteBuyerName" />
+
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/CreditNoteNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/app_primary_text_color"
+            android:text="CreditNote Number"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/CreditNoteDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCreditNoteBuyerName" />
+
+        <TextView
+            android:id="@+id/tvCreditNoteNumber"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:textColor="@color/app_primary_text_color"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/CreditNoteDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/CreditNoteNumber"
+            app:layout_constraintTop_toBottomOf="@id/tvCreditNoteBuyerName" />
+
+        <TextView
+            android:id="@+id/CreditNoteDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/app_primary_text_color"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:text="Date"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CreditNoteNumber" />
+
+        <TextView
+            android:id="@+id/tvCreditNoteDate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:textColor="@color/app_primary_text_color"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/CreditNoteDate"
+            app:layout_constraintTop_toBottomOf="@id/CreditNoteNumber" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/app_primary_text_color"
+            android:gravity="center_vertical"
+            android:text="Total Amount"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CreditNoteDate" />
+
+        <TextView
+            android:id="@+id/tvCreditNoteAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:textColor="@color/app_primary_text_color"
+            android:text="50000"
+            android:textStyle="bold"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CreditNoteDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
